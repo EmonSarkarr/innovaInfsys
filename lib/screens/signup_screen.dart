@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'list_of_users.dart';
-
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
   static const routeName = "/signUpScreen";
@@ -18,26 +16,27 @@ class _SignupScreenState extends State<SignupScreen> {
     size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
             decoration: const BoxDecoration(
-              color: Colors.deepPurple,
-              shape: BoxShape.circle
-            ),
-            child: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios_new)),
+                color: Colors.deepPurple, shape: BoxShape.circle),
+            child: IconButton(
+                onPressed: () {}, icon: const Icon(Icons.arrow_back_ios_new)),
           ),
         ),
-          ),
+      ),
       backgroundColor: Colors.white,
       body: Container(
         height: size.height,
         width: size.width,
         alignment: AlignmentDirectional.topStart,
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('lib/images/signup_union.png'), fit: BoxFit.fitWidth),
+          image: DecorationImage(
+              image: AssetImage('lib/images/signup_union.png'),
+              fit: BoxFit.fitWidth),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
@@ -45,58 +44,55 @@ class _SignupScreenState extends State<SignupScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              const Text('Create\nAccount :)',
-              style: TextStyle(
-                color: Colors.deepPurple,
-                fontSize: 26,
-                fontWeight: FontWeight.bold
-              ),),
+              const Text(
+                'Create\nAccount :)',
+                style: TextStyle(
+                    color: Colors.deepPurple,
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold),
+              ),
               const SizedBox(
                 height: 40,
               ),
-              Text('Enter Email id',
-              style: TextStyle(
-                color: Colors.black.withOpacity(.8),
-                fontSize: 25,
-                  fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w600
-              ),),
-              TextFormField(
-
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Text('Create Username',
+              Text(
+                'Enter Email id',
                 style: TextStyle(
                     color: Colors.black.withOpacity(.8),
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w600
-                ),),
-              TextFormField(
-
+                    fontWeight: FontWeight.w600),
               ),
+              TextFormField(),
               const SizedBox(
                 height: 30,
               ),
-              Text('Create Password',
+              Text(
+                'Create Username',
                 style: TextStyle(
                     color: Colors.black.withOpacity(.8),
                     fontSize: 25,
                     fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w600
-                ),),
-              TextFormField(
-
+                    fontWeight: FontWeight.w600),
               ),
+              TextFormField(),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Create Password',
+                style: TextStyle(
+                    color: Colors.black.withOpacity(.8),
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w600),
+              ),
+              TextFormField(),
               const SizedBox(
                 height: 50,
               ),
               Center(
                 child: Container(
-                  width: size.width *.5,
+                  width: size.width * .5,
                   decoration: const BoxDecoration(
                     color: Colors.deepPurple,
                     borderRadius: BorderRadius.only(
@@ -107,14 +103,16 @@ class _SignupScreenState extends State<SignupScreen> {
                   child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 13),
                     child: Center(
-                      child: Text('Sign Up',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600
-                      ),),
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600),
+                      ),
                     ),
-                  ),),
+                  ),
+                ),
               )
             ],
           ),
